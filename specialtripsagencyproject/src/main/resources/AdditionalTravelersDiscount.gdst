@@ -49,7 +49,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>145</width>
           <header>Min Flight Price</header>
           <constraintValueType>1</constraintValueType>
           <factField>ratePerPerson</factField>
@@ -57,8 +57,24 @@
           <operator>&gt;=</operator>
           <parameters/>
         </condition-column52>
+        <condition-column52>
+          <typedDefaultValue>
+            <valueString></valueString>
+            <dataType>NUMERIC_INTEGER</dataType>
+            <isOtherwise>false</isOtherwise>
+          </typedDefaultValue>
+          <hideColumn>false</hideColumn>
+          <width>131</width>
+          <header>Max Flight Price</header>
+          <constraintValueType>1</constraintValueType>
+          <factField>ratePerPerson</factField>
+          <fieldType>Integer</fieldType>
+          <operator>&lt;=</operator>
+          <parameters/>
+        </condition-column52>
       </conditions>
       <window>
+        <operator></operator>
         <parameters/>
       </window>
     </Pattern52>
@@ -78,7 +94,6 @@
           <header>Min Travellers</header>
           <constraintValueType>1</constraintValueType>
           <factField>numberOfTravelers</factField>
-          <fieldType>Integer</fieldType>
           <operator>&gt;=</operator>
           <parameters/>
         </condition-column52>
@@ -93,7 +108,6 @@
           <header>Max Travellers</header>
           <constraintValueType>1</constraintValueType>
           <factField>numberOfTravelers</factField>
-          <fieldType>Integer</fieldType>
           <operator>&lt;=</operator>
           <parameters/>
         </condition-column52>
@@ -124,6 +138,14 @@
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
       <acceptedTypes>
         <entry>
+          <string>INSERT_ROW</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>INSERT_COLUMN</string>
+          <boolean>false</boolean>
+        </entry>
+        <entry>
           <string>DELETE_COLUMN</string>
           <boolean>false</boolean>
         </entry>
@@ -132,15 +154,7 @@
           <boolean>false</boolean>
         </entry>
         <entry>
-          <string>INSERT_ROW</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
           <string>DELETE_ROW</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
-          <string>INSERT_COLUMN</string>
           <boolean>false</boolean>
         </entry>
       </acceptedTypes>
@@ -190,15 +204,19 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">5</valueNumeric>
+        <valueNumeric class="int">1000</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric class="int">10</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_INTEGER</dataType>
+        <valueString>5</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>10</valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
